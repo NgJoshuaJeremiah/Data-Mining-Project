@@ -1,0 +1,31 @@
+Dataset used can be in "UCI HAR Dataset"
+
+ANN.py : Artifical Neural Network training script
+KNN.py : K nearest neighbor training script
+Random_Forest.py : Random forest training script
+SVM.py : Support Vector Machine training script
+XGBoost.py : extreme gradient boosting training script
+Main.py : Compilation of all the script. Main training script
+Preprocessing.ipynb : outlier removal, SMOTE and PCA script
+
+Run instructions:
+cmd line run :
+1) python3 Main.py
+2) select which dataset and model to train
+
+'Preprocessed_training_set' folder contains the processed dataset
+
+train_df.csv : raw train dataset
+train_df_O.csv : train dataset with outliers removed using IQR
+train_df_O_T.csv.arff : train dataset with outliers removed and transformed using weka
+train_df_O_T_Smote.csv : train dataset with outliers removed, transformed using weka and SMOTE
+train_df_O_T_Smote_PCA.csv : train dataset with outliers removed, transformed using weka, SMOTE and PCA processed
+
+test_df.csv : raw test dataset
+test_df_log_csv.arff : test dataset transformed using weka
+test_df_log_PCA.csv : test dataset transformed using weka and PCA processed
+
+Additional Notes:
+when loading the datasets into weka for inbuilt classifier training, remember to convert the class label to nominal using numeric_to_nominal, to observe accuracy and confusion matrix. File saved using weka (.Arff) have class labels converted to nominal.
+
+
